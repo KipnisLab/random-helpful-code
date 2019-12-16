@@ -1,7 +1,9 @@
 # gettings all the checksums
 
 cd ./geo.upload.directory/raw.data
-myfiles = myfiles=$(ls)
+myfiles=$(ls) 
+# or my files=$(find . -type f)
+ 
 for file in $myfiles; do echo "$file"; checksum=$(md5 "$file"); echo "$checksum">> "checksums.txt";  done;
 
 
